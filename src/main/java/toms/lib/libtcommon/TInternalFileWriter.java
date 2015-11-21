@@ -66,7 +66,7 @@ public class TInternalFileWriter extends TInternalFileManager {
             e.printStackTrace();
             m_ErrorCode = TErrorCode.ERROR_WRITE_FILE;
             m_ErrorCode.setMessage(e.getMessage());
-            m_ErrorCode.setIntParameter(1);
+            m_ErrorCode.setIntParameter(2);
             return false;
         }
 
@@ -83,7 +83,7 @@ public class TInternalFileWriter extends TInternalFileManager {
             e.printStackTrace();
             m_ErrorCode = TErrorCode.ERROR_WRITE_FILE;
             m_ErrorCode.setMessage(e.getMessage());
-            m_ErrorCode.setIntParameter(1);
+            m_ErrorCode.setIntParameter(3);
             return false;
         }
     }
@@ -98,7 +98,7 @@ public class TInternalFileWriter extends TInternalFileManager {
             e.printStackTrace();
             m_ErrorCode = TErrorCode.ERROR_WRITE_FILE;
             m_ErrorCode.setMessage(e.getMessage());
-            m_ErrorCode.setIntParameter(1);
+            m_ErrorCode.setIntParameter(4);
             return false;
         }
     }
@@ -112,8 +112,7 @@ public class TInternalFileWriter extends TInternalFileManager {
         } catch (IOException e) {
             e.printStackTrace();
             m_ErrorCode = TErrorCode.ERROR_WRITE_FILE;
-            m_ErrorCode.setMessage(e.getMessage());
-            m_ErrorCode.setIntParameter(1);
+            m_ErrorCode.setMessage(e);
         }
     }
 }

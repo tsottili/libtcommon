@@ -31,6 +31,13 @@ public enum TErrorCode {
         mMessage = str;
     }
 
+    public void setMessage(Exception e) {
+        if (e != null)
+        {
+            mMessage = e.getMessage();
+        }
+    }
+
     public int getIntParameter() {
         return mIntParameter;
     }
