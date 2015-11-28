@@ -32,7 +32,7 @@ public class VSSMA {
     }
 
     // Add a sample and return insert index.
-    public int Add(float fValue)
+    public void Add(float fValue)
     {
         if (mInsertIndex >= mPeriod)
         {
@@ -44,9 +44,11 @@ public class VSSMA {
         mData[mInsertIndex]= fVal;
 
         mInsertIndex++;
+    }
 
-        // Restituisce l'indice di inserimento.
-        return mInsertIndex-1;
+    public int getCurrentIndex()
+    {
+        return mInsertIndex;
     }
 
     // SMA value
